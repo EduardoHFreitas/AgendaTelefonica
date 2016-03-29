@@ -16,7 +16,7 @@
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
       <RowConstraints minHeight="10.0" prefHeight="30.0" />
-      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+      <RowConstraints minHeight="10.0" prefHeight="200.0" />
    </rowConstraints>
    <columnConstraints>
       <ColumnConstraints minWidth="10.0" prefWidth="100.0" />
@@ -24,31 +24,32 @@
       <ColumnConstraints maxWidth="200.0" minWidth="10.0" prefWidth="200.0" />
    </columnConstraints>
    <children>
-      <Label text="Label" GridPane.columnSpan="3" />
-      <Label text="Label" GridPane.rowIndex="1" />
-      <Label text="Label" GridPane.rowIndex="2" />
-      <TextField GridPane.columnIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-      <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-      <Button mnemonicParsing="false" text="Excluir" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+      <Label text="Id" GridPane.columnSpan="3" />
+      <Label text="Nome" GridPane.rowIndex="1" />
+      <Label text="Telefone" GridPane.rowIndex="2" />
+      <TextField fx:id="id" GridPane.columnIndex="1" />
+      <TextField fx:id="nome" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+      <TextField fx:id="telefone" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="excluir" mnemonicParsing="false" onAction="#Excluir" text="Excluir" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" text="Salvar" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
+      <Button fx:id="salvar" mnemonicParsing="false" onAction="#Salvar" text="Salvar" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
       </Button>
-      <Button mnemonicParsing="false" text="Limpar" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+      <Button fx:id="limpar" mnemonicParsing="false" onAction="#Limpar" text="Limpar" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
       </Button>
       <TableView prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="3" GridPane.rowIndex="3">
         <columns>
-          <TableColumn prefWidth="500.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn prefWidth="35.0" text="Id" />
+          <TableColumn prefWidth="290.0" text="Nome" />
+            <TableColumn prefWidth="75.0" text="Telefone" />
         </columns>
       </TableView>
    </children>
